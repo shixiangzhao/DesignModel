@@ -9,7 +9,7 @@ public class Waiter {
     private List<Command> orders = new ArrayList<Command>();
     
     public void setOrder(Command command){
-        if(command.toString() == "meiyyou"){
+        if(command.toString() == "meiyou"){
             System.out.println("服务员：鸡翅没有了，请点别的烧烤！");
         }else{
             orders.add(command);

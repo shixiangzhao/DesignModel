@@ -3,10 +3,10 @@ package com.cienet.command;
 public class Barbecuer {
     
     public void bakeMutton(){
-        System.out.println("Back Mutton");
+        System.out.println("Bake Mutton");
     }
     
     public void bakeChickenWing(){
-        System.out.println("Back Chicken Wing");
+        System.out.println("Bake Chicken Wing");
     }
 }
