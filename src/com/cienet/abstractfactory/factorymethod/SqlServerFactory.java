@@ -1,12 +1,12 @@
 package com.cienet.abstractfactory.factorymethod;
 
-public class AccessServerUserFactory implements IFactory {
+public class SqlServerFactory implements IFactory {
 
     public IServerUser createServerUser() {
-        return new AccessServerUser();
+        return new SqlServerUser();
     }
 
     public IServerDepartment createServerDepartment() {
-        return new AccessServerDepartment();
+        return new SqlServerDepartment();
     }
 }

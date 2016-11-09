@@ -36,7 +36,7 @@ public class Client {
         leatherShoes.setComponent(person);
         tie.setComponent(leatherShoes);
         suit.setComponent(tie);
-        suit.show();        
+        suit.show();
     }
 
 }
