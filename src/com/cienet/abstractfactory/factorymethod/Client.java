@@ -5,6 +5,7 @@ package com.cienet.abstractfactory.factorymethod;
  * 通常是在运行时刻再创建一个ConcreteFactory类的实例，这个具体的工厂再创建具有特定实现的产品对象，
  * 也就是说，为创建不同的产品对象，客户端使用不同的具体工厂。
  * 最大的好处是便于更换产品系列，IFactory iFactory = new SqlServerFactory(); 只在初始化出现一次。
+ * 
  * @author shixiang.zhao
  */
 public class Client {
@@ -21,7 +22,7 @@ public class Client {
         IServerUser isUser2 = iFactory.createServerUser();
         isUser2.insert(user);
         isUser2.findUser(1);
-        
+
         System.out.println("===================================");
         Department department = new Department();
         iFactory = new SqlServerFactory();
