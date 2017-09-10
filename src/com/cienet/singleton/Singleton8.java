@@ -12,6 +12,8 @@ import java.io.Serializable;
  */
 public class Singleton8 implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+
 	private static Singleton8 INSTANCE = new Singleton8();
 
 	private Singleton8() {
