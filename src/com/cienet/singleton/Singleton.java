@@ -14,10 +14,11 @@ public class Singleton {
 	private Singleton() {
 	}
 
-	public Singleton getInstance() {
-		if (instance != null) {
+	public static Singleton getInstance() {
+		if (instance == null) {
 			instance = new Singleton();
+			System.out.println("New a singleton class: " + instance);
 		}
-		return new Singleton();
+		return instance;
 	}
 }
