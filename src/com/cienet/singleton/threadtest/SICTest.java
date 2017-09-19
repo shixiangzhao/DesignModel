@@ -22,7 +22,7 @@ public class SICTest {
 		
 		Date endTime =new Date();
 		
-		System.out.println("����ʱ��:"+(endTime.getTime()-startTime.getTime())+"ms");
+		System.out.println("运行时长:"+(endTime.getTime()-startTime.getTime())+"ms");
 
 
 		

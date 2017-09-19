@@ -10,7 +10,7 @@ public class LockTest {
 
 	public static void main(String[] args) {
 		Date startTime =new Date();
-		Runnable lockLazyPrinterRunner = () -> LockSingletonLazyPrinter.getInstance("ͬ������ӡ��");
+		Runnable lockLazyPrinterRunner = () -> LockSingletonLazyPrinter.getInstance("同步锁打印机");
 		for (int i = 0; i < 5; i++) {
 			Thread lockLazyPrinterThread = new Thread(lockLazyPrinterRunner);
 			lockLazyPrinterThread.start();
@@ -24,8 +24,8 @@ public class LockTest {
 		
 		Date endTime =new Date();
 		
-		System.out.println("����ʱ��:"+(endTime.getTime()-startTime.getTime())+"ms");
-		System.out.println("�����ٽ���"+(LockSingletonLazyPrinter.getInstance("DCL��ӡ��").counter-1)+"��");
+		System.out.println("运行时长:"+(endTime.getTime()-startTime.getTime())+"ms");
+		System.out.println("进入临界区"+(LockSingletonLazyPrinter.getInstance("DCL打印机").counter-1)+"次");
 
 
 		

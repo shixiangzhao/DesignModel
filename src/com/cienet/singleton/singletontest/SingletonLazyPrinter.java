@@ -4,7 +4,7 @@ public class SingletonLazyPrinter implements Printable {
 	private String printerName;
 	private SingletonLazyPrinter(String printerName) {
 		this.printerName=printerName;
-		System.out.println("���������ӡ��");
+		System.out.println("获得懒汉打印机");
 	}
 	
 	private static SingletonLazyPrinter lazyPrinter=null;
@@ -16,10 +16,10 @@ public class SingletonLazyPrinter implements Printable {
    }  
 	@Override
 	public void print() {
-		if(!this.printerName.equals("������ӡ��")) {
-			System.out.println("δ�ҵ���ӡ��...");
+		if(!this.printerName.equals("懒汉打印机")) {
+			System.out.println("未找到打印机...");
 		}
-		else{System.out.println("����"+printerName);}
+		else{System.out.println("这是"+printerName);}
 	}
 	
 

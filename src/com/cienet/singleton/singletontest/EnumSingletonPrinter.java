@@ -2,7 +2,7 @@ package com.cienet.singleton.singletontest;
 
 public enum EnumSingletonPrinter {
 
-	INSTANCE("ö�ٴ�ӡ��"){
+	INSTANCE("枚举打印机"){
 
 		@Override
 
@@ -13,7 +13,7 @@ public enum EnumSingletonPrinter {
 
 		@Override
 		public void print() {
-			System.out.println("����ö�ٴ�ӡ��");
+			System.out.println("这是枚举打印机");
 			
 		}
 
@@ -24,7 +24,7 @@ public enum EnumSingletonPrinter {
 	protected abstract EnumSingletonPrinter getInstance(String printerName);
 	private String printerName;
 	private EnumSingletonPrinter(String printerName) {
-		System.out.println("��ȡö�ٴ�ӡ��");
+		System.out.println("获取枚举打印机");
 		this.printerName = printerName;
 	}
 	public abstract void print();

@@ -8,31 +8,31 @@ public class RegistrationSingletonPrinter implements Printable {
 	
     private static HashMap<String,RegistrationSingletonPrinter> printerMap =new HashMap<String,RegistrationSingletonPrinter>();
     static{  
-    	RegistrationSingletonPrinter RgPrinter = new RegistrationSingletonPrinter("�ǼǴ�ӡ��");  
+    	RegistrationSingletonPrinter RgPrinter = new RegistrationSingletonPrinter("登记打印机");  
     	printerMap.put(RgPrinter.getClass().getName(), RgPrinter);  
     }  
     
     protected RegistrationSingletonPrinter(String printerName){
     	this.printerName=printerName;
-    	System.out.println("��ȡ�ǼǴ�ӡ��");
+    	System.out.println("获取登记打印机");
     }
     /**
      * 
-     * @param printerName ��ӡ������
-     * @param className   ʵ�������ƣ���֪����null
-     * @return ��ӡ��
+     * @param printerName 打印机名称
+     * @param className   实现类名称，不知道填null
+     * @return 打印机
      */
     public static RegistrationSingletonPrinter getInstance(String printerName,String className) { 
     	if(className==null) {
     		className= RegistrationSingletonPrinter.class.getName();  
     	}
-        if(!className.equals("com.cienet.singleton.singletontest.RegistrationSingletonPrinter")) {  
+        if(!className.equals("com.lh.singletontest.RegistrationSingletonPrinter")) {  
         	className = RegistrationSingletonPrinter.class.getName();  
             System.out.println("className == null"+"--->className="+className);  
         }  
         if(printerMap.get(className) == null) {  
             try {  
-            	printerMap.put(className, (RegistrationSingletonPrinter) Class.forName("com.cienet.singleton.singletontest.RegistrationSingletonPrinter").newInstance());  
+            	printerMap.put(className, (RegistrationSingletonPrinter) Class.forName("com.lh.singletontest.RegistrationSingletonPrinter").newInstance());  
             } catch (InstantiationException e) {  
                 e.printStackTrace();  
             } catch (IllegalAccessException e) {  
@@ -45,10 +45,10 @@ public class RegistrationSingletonPrinter implements Printable {
     }  
     @Override
 	public void print() {
-    	if (!this.printerName.equals("�ǼǴ�ӡ��")) {
-			System.out.println("δ�ҵ���ӡ��...");
+    	if (!this.printerName.equals("登记打印机")) {
+			System.out.println("未找到打印机...");
 		} else {
-			System.out.println("����" + printerName);
+			System.out.println("这是" + printerName);
 		}
 	
 		

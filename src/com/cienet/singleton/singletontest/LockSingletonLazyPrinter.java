@@ -1,7 +1,7 @@
 package com.cienet.singleton.singletontest;
 
 /**
- * ������߳����⣬�����д����߳̽���ȴ�״̬
+ * 解决了线程问题，但会有大量线程进入等待状态
  */
 public class LockSingletonLazyPrinter implements Printable {
 	public static int counter = 0;
@@ -9,7 +9,7 @@ public class LockSingletonLazyPrinter implements Printable {
 
 	private LockSingletonLazyPrinter(String printerName) {
 		this.printerName = printerName;
-		System.out.println("���ͬ������ӡ��");
+		System.out.println("获得同步锁打印机");
 	}
 
 	private static LockSingletonLazyPrinter lockLazyPrinter = null;
@@ -26,10 +26,10 @@ public class LockSingletonLazyPrinter implements Printable {
 
 	@Override
 	public void print() {
-		if (!this.printerName.equals("ͬ������ӡ��")) {
-			System.out.println("δ�ҵ���ӡ��...");
+		if (!this.printerName.equals("同步锁打印机")) {
+			System.out.println("未找到打印机...");
 		} else {
-			System.out.println("����" + printerName);
+			System.out.println("这是" + printerName);
 		}
 	}
 

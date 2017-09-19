@@ -6,7 +6,7 @@ public class StaticInnerClassSingletonLazyPrinter implements Printable {
 
 	private StaticInnerClassSingletonLazyPrinter(String printerName) {
 		this.printerName = printerName;
-		System.out.println("��þ�̬���ӡ��");
+		System.out.println("Set the static printer");
 	}
 
 	public static StaticInnerClassSingletonLazyPrinter getInstance() {
@@ -16,15 +16,15 @@ public class StaticInnerClassSingletonLazyPrinter implements Printable {
 
 	private static class PrinterGiver {
 		private static StaticInnerClassSingletonLazyPrinter SICLazyPrinter = new StaticInnerClassSingletonLazyPrinter(
-				"��̬���ӡ��");
+				"Static Printer");
 	}
 
 	@Override
 	public void print() {
-		if (!this.printerName.equals("��̬���ӡ��")) {
-			System.out.println("δ�ҵ���ӡ��...");
+		if (!this.printerName.equals("Static Printer")) {
+			System.out.println("Can't find printer!");
 		} else {
-			System.out.println("����" + printerName);
+			System.out.println("This is " + printerName);
 		}
 	}
 

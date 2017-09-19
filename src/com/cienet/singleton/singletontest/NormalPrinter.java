@@ -10,11 +10,11 @@ public class NormalPrinter implements Printable {
 
 	@Override
 	public void print() {
-		if (!this.printerName.equals("��ͨ��ӡ��")) {
-			System.out.println("δ�ҵ���ӡ��");
+		if (!this.printerName.equals("普通打印机")) {
+			System.out.println("未找到打印机");
 
 		} else {
-			System.out.println("����" + printerName);
+			System.out.println("这是" + printerName);
 		}
 	}
 

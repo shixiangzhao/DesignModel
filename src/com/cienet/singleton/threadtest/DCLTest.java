@@ -9,7 +9,7 @@ public class DCLTest {
 	public static void main(String[] args) {
 		Date startTime =new Date();
 
-		Runnable DCLLazyPrinterRunner = () -> DCLSingletonLazyPrinter.getInstance("DCL��ӡ��");
+		Runnable DCLLazyPrinterRunner = () -> DCLSingletonLazyPrinter.getInstance("DCL打印机");
 		for (int i = 0; i < 5; i++) {
 			Thread DCLLazyPrinterThread = new Thread(DCLLazyPrinterRunner);
 			DCLLazyPrinterThread.start();
@@ -23,8 +23,8 @@ public class DCLTest {
 		
 		Date endTime =new Date();
 		
-		System.out.println("����ʱ��:"+(endTime.getTime()-startTime.getTime())+"ms");
-		System.out.println("�����ٽ���"+DCLSingletonLazyPrinter.getInstance("DCL��ӡ��").counter+"��");
+		System.out.println("运行时长:"+(endTime.getTime()-startTime.getTime())+"ms");
+		System.out.println("进入临界区"+DCLSingletonLazyPrinter.getInstance("DCL打印机").counter+"次");
 		
 
 

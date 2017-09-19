@@ -9,7 +9,7 @@ public class DCLSingletonLazyPrinter implements Printable {
 	private DCLSingletonLazyPrinter(String printerName) {
 		
 		this.printerName = printerName;
-		System.out.println("���DCL��ӡ��");
+		System.out.println("获得DCL打印机");
 	}
 
 	private static volatile DCLSingletonLazyPrinter DCLLazyPrinter = null;
@@ -30,10 +30,10 @@ public class DCLSingletonLazyPrinter implements Printable {
 
 	@Override
 	public void print() {
-		if (!this.printerName.equals("DCL��ӡ��")) {
-			System.out.println("δ�ҵ���ӡ��...");
+		if (!this.printerName.equals("DCL打印机")) {
+			System.out.println("未找到打印机...");
 		} else {
-			System.out.println("����" + printerName);
+			System.out.println("这是" + printerName);
 		}
 	}
 
