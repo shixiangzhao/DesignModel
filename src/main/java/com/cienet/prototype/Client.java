@@ -2,7 +2,10 @@ package com.cienet.prototype;
 
 /**
  * class: Client <br>
- *
+ * 原型模式（Prototype），用原型实例指定创建对象的种类，并且通过
+ * 拷贝这些原型创建新的对象。
+ * 原型模式，其实就是从一个对象再创建另外一个可定制的对象，而且不需
+ * 知道任何创建的细节。
  * @author: ZhaoShixiang <br>
  * @date: 2018/9/15 11:52
  */
